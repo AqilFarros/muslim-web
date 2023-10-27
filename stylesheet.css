@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* INI UNTUK TEKS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "poppins", "sans-serif";
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: rgb(206, 255, 206);
+}
+
+/* NAVBAR */
+.header {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* padding: 1em; */
+    background: #00FFAB;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    z-index: 999;
+    transition: 1s;
+}
+
+.header h1 {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    color: white;
+    font-size: 5vh;
+    transition: .5s;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 1;
+        font-size: 5vh;
+    }
+    50% {
+        opacity: .5;
+        font-size: 6vh;
+    }
+}
+
+.header.sticky {
+    height: 90px;
+}
+
+.header.sticky h1 {
+    transform: translateY(-999px);
+    animation: none;
+}
+
+#menu {
+    font-size: 3.5rem;
+    color: black;
+    display: none;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    transition: .5s;
+}
+
+.header.sticky .logo {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+    width: 6rem;
+}
+
+.navbar {
+    position: absolute;
+    transform: translate(-20%, -50%);
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.header.sticky .navbar {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .75s;
+}
+
+.navbar a {
+    position: relative;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 2rem;
+    transition: .5s;
+}
+
+.navbar a:hover {
+    color: rgba(6, 95, 33, 0.521);
+}
+
+.button {
+    position: absolute;
+    top: 80%;
+    right: 5%;
+    transform: translate(0, -50%);
+    /* display: inline-block; */
+    padding: 1rem 2.8rem;
+    border-radius: 1rem;
+    background: rgba(6, 95, 33, 0.521);
+    /* box-shadow: 3px 3px 12px 0 rgba(46, 46, 46, .965); */
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0;
+    border: 2px solid #00FFAB;
+    transition: .5s;
+}
+
+.header.sticky .button {
+    opacity: 1;
+    top: 50%;
+    /* transition-delay: .75s; */
+}
+
+.button:hover {
+    transition-delay: 0;
+    border: 2px solid rgba(6, 95, 33, 0.521);
+    background-color: #00FFAB;
+}
+
+.kembali {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 2%;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgreen;
+    border-radius: 5px;
+    z-index: 22;
+    transform: translateX(1000px);
+    transition: 1s;
+}
+
+.kembali a {
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    border-top: solid 7px white;
+    border-right: solid 7px white;
+    transform: rotate(-45deg);
+    border-radius: 5px;
+}
+
+.kembali.block {
+    transform: translateX(0);
+}
+
+@media screen and (max-width:909px) {
+    .logo {
+        z-index: 999;
+    }
+    #menu {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(50%, -50%);
+        transition: .5s;
+    }
+
+    #menu {
+        display: block;
+        opacity: 0;
+        z-index: 999;
+    }
+
+    .header.sticky #menu {
+        transform: translate(0, -50%);
+        opacity: 1;
+        transition-delay: .75s;
+    }
+
+    .header.sticky .navbar {
+        transition-delay: 0s;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #00FFAB;
+        transition-delay: 0s;
+        overflow: hidden;
+        transition: 0;
+    }
+
+    .header.sticky .navbar {
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar a {
+        padding: 10px 0;
+    }
+
+    .navbar.active {
+        top: 210%;
+        height: 200px;
+    }
+
+    .button {
+        display: none;
+    }
+}
+
+/* HOME */
+.awal {
+    margin: 20vh 0 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gambar {
+    width: 90%;
+    border-radius: 20px;
+}
+
+/* JADWAL SHALAT */
+.jadwal-shalat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-header {
+    padding: 2rem 2rem;
+    border-radius: .5rem .5rem 0 0;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #14C38E;
+    color: rgb(82, 73, 73);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    font-family: 550;
+}
+
+.lokasi {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.lokasi p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#prov {
+    font-size: 1.2rem;
+}
+
+#city {
+    font-size: 1.2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-primary th {
+    padding: 1rem 0;
+    background: #00FFAB;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding: 8px;
+}
+
+.table td {
+    text-align: center;
+    padding: 8px;
+    background: #F6F7D4;
+}
+
+.table-primary td {
+    color: white;
+    background-color: #00FFAB;
+}
+
+@media screen and (max-width: 700px) {
+    .table-primary th {
+        padding: .5rem 0;
+        font-size: .7rem;
+    }
+
+    .table td {
+        padding: 4px;
+        font-size: .7em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .lokasi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #prov {
+        font-size: 1rem;
+    }
+    
+    #city {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .table-primary th {
+        padding: .5rem 0;
+        font-size: .5rem;
+    }
+
+    .table td {
+        padding: 4px;
+        font-size: .5em;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .table-primary th {
+        padding: .2rem 0;
+        font-size: .5rem;
+    }
+
+    .table td {
+        padding: 2px;
+        font-size: .5em;
+    }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ASMAUL HUSNA */
+.tombol {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tombol button {
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    background: #00ffaa;
+    transition: .5s;
+}
+
+.tombol button:hover {
+    background-color: rgb(63, 145, 87);
+}
+
+.tombol .btn.active {
+    background-color: rgb(63, 145, 87);
+}
+
+.result {
+    width: 100%;
+    padding: 2rem 3rem 3rem;
+    /* margin: 3rem 4rem 4rem; */
+    border-radius: 2rem;
+    gap: 3rem;
+    /* display: grid;
+    grid-template-columns: repeat(3, 50fr); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kotak {
+    width: 20vw;
+    height: 12rem;
+    margin: 0 0 1rem 0;
+    transition: .5s;
+}
+
+.kotak:hover {
+    transform: scale(1.1);
+}
+
+.kecil {
+    width: 100%;
+    border-radius: 5rem;
+    background-color: rgb(63, 145, 87);
+    padding: .3rem 0 .4rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+
+.nomor {
+    background: #00ffaa;
+    padding: 0 .5rem;
+    text-align: center;
+    border-radius: 3rem;
+    margin: .2rem 0 0 0;
+    color: white;
+}
+
+.save {
+    width: .9rem;
+    height: 1.75rem;
+}
+
+.sukses {
+    width: 100%;
+}
+
+.nama {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.arab {
+    margin: .4rem .5rem 0 0;
+    text-align: right;
+    font-size: 2rem;
+}
+
+.arti {
+    margin: .3rem .5rem 0 0;
+    text-align: right;
+    font-size: 1rem;
+}
+
+.line {
+    margin: 1rem 0 0 0;
+    border-top: 3px solid #14C38E;
+}
+
+@media screen and (max-width: 700px) {
+    .kotak {
+        width: 100vw;
+    }
+    .tombol button {
+        padding: 10px;
+        font-size: .7em;
+    }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* LIST AL-QURAN */
+.ayat {
+    margin: .5rem .5rem 0 0;
+    text-align: right;
+    font-size: 1rem;
+}
+
+/* FOOTER */
+footer {
+    padding: 60px;
+    margin-top: 40px;
+    background-color: #00FFAB;
+    color: #F6F7D4;
+    text-align: center;
+}

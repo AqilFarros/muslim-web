@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" href="images/Modern Geometric Line Fox Logo.png" type="image/x-icon">
+    <title>Muslin web</title>
+</head>
+
+<body>
+    <header class="header">
+        <img src="images/Modern Geometric Line Fox Logo.png" alt="" class="logo">
+        <i class="bx bx-menu-alt-right" style="color: white;" id="menu"></i>
+
+        <nav class="navbar">
+            <a href="index.html">Jadwal Shalat</a>
+            <a href="asmaul-husna.html">Asmaul Husna</a>
+            <a href="list-surat.html">Al-Quran</a>
+        </nav>
+
+        <div class="btn">
+            <button class="button">User</button>
+        </div>
+        <h1>scroll down >></h1>
+    </header>
+
+    <div class="kembali">
+        <a href="#"></a>
+    </div>
+
+    <section class="awal">
+        <img src="images/list-surat-header.png" alt="Foto" class="gambar">
+    </section>
+
+    <div class="tombol">
+        <button onclick="tampilData(event, 'bagan1')" class="btn">Al Fatihah - Shad</button>
+        <button onclick="tampilData(event, 'bagan2')" class="btn">Az Zumar - Al Insan</button>
+        <button onclick="tampilData(event, 'bagan3')" class="btn">Al Mursalat - An Nas</button>
+    </div>
+    <div class="pembungkus" id="bagan1">
+        <div class="result" id="bagian1"></div>
+    </div>
+    <div class="pembungkus" id="bagan2">
+        <div class="result" id="bagian2"></div>
+    </div>
+    <div class="pembungkus" id="bagan3">
+        <div class="result" id="bagian3"></div>
+    </div>
+
+    <footer>
+        <h1>Copyright &copy 2023 Aqil Farros Al Ghonim. All Rights Reserved </h1>
+    </footer>
+
+    <script src="listQuran.js"></script>
+</body>
+
+</html>
