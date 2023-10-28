@@ -414,6 +414,7 @@ body {
     padding: 20px;
     margin: 10px;
     background: #00ffaa;
+    cursor: pointer;
     transition: .5s;
 }
 
