@@ -15,7 +15,7 @@ document.getElementById('menu').onclick = function () {
 
 window.onload = function() {
     getDataQuran();
-    // tampilData();
+    tampilData();
 }
 
 function getDataQuran() {
