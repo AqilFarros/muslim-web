@@ -190,7 +190,7 @@ function displayDataAsma3(asma) {
     })
 }
 
-function tampilData(ev, bagianAsma) {
+function tampilData(ev, bagianAsma, fade) {
     let i = 0;
     let bagian = document.getElementsByClassName('pembungkus');
 
@@ -207,4 +207,12 @@ function tampilData(ev, bagianAsma) {
     }
 
     ev.currentTarget.classList.add('active');
+
+    let result = document.getElementsByClassName('result');
+
+    for (i = 0; i < result.length; i++) {
+        result[i].className = result[i].className.replace(' active', '');
+    }
+
+    document.getElementById(fade).classList.add('active');
 }
