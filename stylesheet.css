@@ -431,12 +431,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    opacity: 0;
-    transition: .5s;
-}
-
-.result.active {
-    opacity: 1;
 }
 
 .kotak {

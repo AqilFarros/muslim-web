@@ -202,7 +202,7 @@ function displayData3(data) {
     })
 }
 
-function tampilData(event, targetSurat, fade) {
+function tampilData(event, targetSurat) {
     let i = 0;
     let bagianSurat = document.getElementsByClassName('pembungkus');
 
@@ -219,12 +219,4 @@ function tampilData(event, targetSurat, fade) {
     }
 
     event.currentTarget.classList.add('active');
-
-    let result = document.getElementsByClassName('result');
-
-    for (i = 0; i < result.length; i++) {
-        result[i].className = result[i].className.replace(' active', '');
-    }
-
-    document.getElementById(fade).classList.add('active');
 }
