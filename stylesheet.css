@@ -165,7 +165,7 @@ body {
     border-radius: 5px;
     z-index: 22;
     transform: translateX(1000px);
-    transition: 1s;
+    transition: .5s;
 }
 
 .kembali a {
@@ -180,6 +180,15 @@ body {
 
 .kembali.block {
     transform: translateX(0);
+}
+
+.kembali:hover {
+    background-color: lightgreen;
+}
+
+.kembali:hover a {
+    border-top: solid 7px darkgreen;
+    border-right: solid 7px darkgreen;
 }
 
 @media screen and (max-width:909px) {
@@ -422,6 +431,12 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    opacity: 0;
+    transition: .5s;
+}
+
+.result.active {
+    opacity: 1;
 }
 
 .kotak {

@@ -202,7 +202,7 @@ function displayData3(data) {
     })
 }
 
-function tampilData(event, targetSurat) {
+function tampilData(event, targetSurat, fade) {
     let i = 0;
     let bagianSurat = document.getElementsByClassName('pembungkus');
 
@@ -218,5 +218,13 @@ function tampilData(event, targetSurat) {
         btn[i].className = btn[i].className.replace(' active', '');
     }
 
-    event.currentTarget.classList.add('active')
+    event.currentTarget.classList.add('active');
+
+    let result = document.getElementsByClassName('result');
+
+    for (i = 0; i < result.length; i++) {
+        result[i].className = result[i].className.replace(' active', '');
+    }
+
+    document.getElementById(fade).classList.add('active');
 }
