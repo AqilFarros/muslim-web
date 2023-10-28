@@ -515,3 +515,9 @@ footer {
     color: #F6F7D4;
     text-align: center;
 }
+
+@media screen and (max-width: 909px) {
+    footer {
+        font-size: 1em;
+    }
+}
