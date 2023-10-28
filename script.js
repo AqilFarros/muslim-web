@@ -141,10 +141,10 @@ fetch(jadwalApi)
                                             solat.innerHTML = solat1;
                                         } else if (clockNow >= el[solat3]) {
                                             solat.innerHTML = solat3;
-                                        } else if (clockNow >= '00:00' && clockNow <= el[solat4]) {
+                                        } else if (clockNow >= '00:00' && clockNow < el[solat4]) {
                                             solat.innerHTML = solat3;
                                         } else if (clockNow >= larang && clockNow < el[solat5]) {
-                                            solat.innerHTML = '(waktu dilarang shalat!!!)'
+                                            solat.innerHTML = '(waktu dilarang shalat!!!)';
                                         }
                                     })
                                 })
