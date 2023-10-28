@@ -64,6 +64,12 @@ body {
     height: 90px;
 }
 
+.navigation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .header.sticky h1 {
     transform: translateY(-999px);
     animation: none;
@@ -222,12 +228,9 @@ body {
 
     .navbar {
         position: absolute;
-        top: 100%;
+        top: 80%;
         width: 100%;
         height: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         background: #00FFAB;
         transition-delay: 0s;
         overflow: hidden;
@@ -240,7 +243,10 @@ body {
     }
 
     .navbar a {
+        width: 100%;
         padding: 10px 0;
+        display: block;
+        text-align: center;
     }
 
     .navbar.active {
