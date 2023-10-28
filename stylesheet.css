@@ -273,6 +273,30 @@ body {
 }
 
 /* JADWAL SHALAT */
+.waktu-sekarang {
+    margin: 20px 50px;
+    padding: 60px 0;
+    background-color: #14C38E;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.waktu-sekarang h2 {
+    text-align: center;
+    margin: 10px;
+}
+
+.waktu-sekarang #solat {
+    transition: .5s;
+}
+
+.waktu-sekarang #solat:hover {
+    color: rgba(6, 95, 33, 0.521);
+}
+
 .jadwal-shalat {
     width: 100%;
     display: flex;
