@@ -90,13 +90,6 @@ fetch(jadwalApi)
             }
 
             let arrayShalat = ['tanggal', 'imsak', 'subuh', 'terbit', 'dzuhur', 'ashar', 'maghrib', 'isya'];
-            let array1 = ['subuh', 'terbit', 'dhuha', 'dzuhur', 'ashar', 'maghrib', 'isya'];
-            let array2 = ['terbit', 'dhuha', 'dzuhur', 'ashar', 'maghrib', 'isya', 'subuh'];
-            let array3 = ['isya'];
-            let array4 = ['subuh'];
-            let array5 = ['dzuhur'];
-            let array6 = ['terbit'];
-            let array7 = ['dhuha'];
 
             arrayShalat.forEach(shalat => {
                 const td = document.createElement('td');
@@ -108,6 +101,13 @@ fetch(jadwalApi)
 
             let solat = document.querySelector('#solat');
 
+            let array1 = ['subuh', 'terbit', 'dhuha', 'dzuhur', 'ashar', 'maghrib', 'isya'];
+            let array2 = ['terbit', 'dhuha', 'dzuhur', 'ashar', 'maghrib', 'isya', 'subuh'];
+            let array3 = ['isya'];
+            let array4 = ['subuh'];
+            let array5 = ['dzuhur'];
+            let array6 = ['terbit'];
+            let array7 = ['dhuha'];
 
             array1.forEach(function (solat1) {
                 array2.forEach(function (solat2) {
