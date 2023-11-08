@@ -1,7 +1,7 @@
-window.addEventListener('load', function () {
-    const header = document.querySelector('.header');
-    header.classList.toggle('sticky');
-})
+// window.addEventListener('load', function () {
+//     const header = document.querySelector('.header');
+//     header.classList.toggle('sticky');
+// })
 
 window.addEventListener('scroll', function() {
     const back = document.querySelector('.kembali');
