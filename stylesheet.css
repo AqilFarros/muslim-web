@@ -118,7 +118,7 @@ body {
 .navbar a {
     position: relative;
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-right: 2rem;
     transition: .5s;
