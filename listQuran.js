@@ -19,7 +19,7 @@ window.onload = function() {
 }
 
 function getDataQuran() {
-    fetch('https://api.banghasan.com/quran/format/json/surat')
+    fetch('https://api.quran.gading.dev/surah')
     .then(function(response) {
         if (!response.ok) {
             throw new Error ('Gagal mengambil data')
@@ -41,7 +41,7 @@ function displayData1(data) {
     let resultDiv = document.querySelector('#bagian1');
     resultDiv.innerHTML = '';
 
-    let surat1 = data.hasil.slice(0, 38)
+    let surat1 = data.data.slice(0, 38)
 
     surat1.forEach(function(surat) {
         let suratDiv = document.createElement('div');
@@ -51,11 +51,11 @@ function displayData1(data) {
         abuDiv.classList.add('kecil');
 
         let nomorSurat = document.createElement('button');
-        nomorSurat.innerHTML = surat.nomor;
+        nomorSurat.innerHTML = surat.number;
         nomorSurat.classList.add('nomor');
 
         let namaSurat = document.createElement('h3');
-        namaSurat.innerHTML = surat.nama;
+        namaSurat.innerHTML = surat.name.transliteration.id;
         namaSurat.classList.add('nama');
 
         let gambar = document.createElement('save');
@@ -65,15 +65,15 @@ function displayData1(data) {
         putihDiv.classList.add('sukses');
 
         let arabSurat = document.createElement('h2');
-        arabSurat.innerHTML = surat.asma;
+        arabSurat.innerHTML = surat.name.short;
         arabSurat.classList.add('arab');
 
         let ayatSurat = document.createElement('p');
-        ayatSurat.innerHTML = 'Ayat : ' + surat.ayat;
+        ayatSurat.innerHTML = 'Ayat : ' + surat.numberOfVerses;
         ayatSurat.classList.add('ayat');
 
         let artiSurat = document.createElement('p');
-        artiSurat.innerHTML = 'Arti : ' + surat.arti;
+        artiSurat.innerHTML = 'Arti : ' + surat.name.translation.id;
         artiSurat.classList.add('arti');
 
         let value = document.createElement('p');
@@ -96,7 +96,7 @@ function displayData2(data) {
     let resultDiv = document.querySelector('#bagian2');
     resultDiv.innerHTML = '';
 
-    let surat1 = data.hasil.slice(38, 76)
+    let surat1 = data.data.slice(38, 76)
 
     surat1.forEach(function(surat) {
         let suratDiv = document.createElement('div');
@@ -106,11 +106,11 @@ function displayData2(data) {
         abuDiv.classList.add('kecil');
 
         let nomorSurat = document.createElement('button');
-        nomorSurat.innerHTML = surat.nomor;
+        nomorSurat.innerHTML = surat.number;
         nomorSurat.classList.add('nomor');
 
         let namaSurat = document.createElement('h3');
-        namaSurat.innerHTML = surat.nama;
+        namaSurat.innerHTML = surat.name.transliteration.id;
         namaSurat.classList.add('nama');
 
         let gambar = document.createElement('save');
@@ -120,15 +120,15 @@ function displayData2(data) {
         putihDiv.classList.add('sukses');
 
         let arabSurat = document.createElement('h2');
-        arabSurat.innerHTML = surat.asma;
+        arabSurat.innerHTML = surat.name.short;
         arabSurat.classList.add('arab');
 
         let ayatSurat = document.createElement('p');
-        ayatSurat.innerHTML = 'Ayat : ' + surat.ayat;
+        ayatSurat.innerHTML = 'Ayat : ' + surat.numberOfVerses;
         ayatSurat.classList.add('ayat');
 
         let artiSurat = document.createElement('p');
-        artiSurat.innerHTML = 'Arti : ' + surat.arti;
+        artiSurat.innerHTML = 'Arti : ' + surat.name.translation.id;
         artiSurat.classList.add('arti');
 
         let value = document.createElement('p');
@@ -151,7 +151,7 @@ function displayData3(data) {
     let resultDiv = document.querySelector('#bagian3');
     resultDiv.innerHTML = '';
 
-    let surat1 = data.hasil.slice(76)
+    let surat1 = data.data.slice(76)
 
     surat1.forEach(function(surat) {
         let suratDiv = document.createElement('div');
@@ -161,11 +161,11 @@ function displayData3(data) {
         abuDiv.classList.add('kecil');
 
         let nomorSurat = document.createElement('button');
-        nomorSurat.innerHTML = surat.nomor;
+        nomorSurat.innerHTML = surat.number;
         nomorSurat.classList.add('nomor');
 
         let namaSurat = document.createElement('h3');
-        namaSurat.innerHTML = surat.nama;
+        namaSurat.innerHTML = surat.name.transliteration.id;
         namaSurat.classList.add('nama');
 
         let gambar = document.createElement('save');
@@ -175,15 +175,15 @@ function displayData3(data) {
         putihDiv.classList.add('sukses');
 
         let arabSurat = document.createElement('h2');
-        arabSurat.innerHTML = surat.asma;
+        arabSurat.innerHTML = surat.name.short;
         arabSurat.classList.add('arab');
 
         let ayatSurat = document.createElement('p');
-        ayatSurat.innerHTML = 'Ayat : ' + surat.ayat;
+        ayatSurat.innerHTML = 'Ayat : ' + surat.numberOfVerses;
         ayatSurat.classList.add('ayat');
 
         let artiSurat = document.createElement('p');
-        artiSurat.innerHTML = 'Arti : ' + surat.arti;
+        artiSurat.innerHTML = 'Arti : ' + surat.name.translation.id;
         artiSurat.classList.add('arti');
 
         let value = document.createElement('p');
