@@ -25,7 +25,7 @@ console.log(mm);
 const now = yyyy + '-' + mm + '-' + dd;
 
 // JADWAL SHALAT API
-const jadwalApi = `https://api.myquran.com/v1/sholat/jadwal/${city}/${yyyy}/${mm}`;
+const jadwalApi = `https://api.myquran.com/v2/sholat/jadwal/${city}/${yyyy}/${mm}`;
 
 window.onload = function () {
     displayWaktu();
